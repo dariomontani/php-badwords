@@ -11,6 +11,7 @@ $text = "Hello World!";
 $lunghezza = strlen($text);
 
 $censurata = $_GET["censurata"];
+$paragrafoCensurato = str_replace($censurata, "***", $text);
 
 ?>
 
@@ -25,7 +26,10 @@ $censurata = $_GET["censurata"];
 <body>
 
     <p><?php echo $text; ?></p>
-    <p>Lunghezza:<?php echo $lunghezza ?></p>
+    <p>Lunghezza:<?php echo $lunghezza; ?></p>
+
+    <p><?php echo $paragrafoCensurato; ?></p>
+    <p><?php echo strlen($paragrafoCensurato); ?></p>
 
 </body>
 </html>
