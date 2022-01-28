@@ -6,12 +6,15 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 <!-- Ps provate una volta avviato MAMP a richiamare nel terminale il comando php -v  per sapere se sta funzionando php anche da terminale -->
 
 <?php
-
+// dichiaro la mia variabile
 $text = "Hello World!";
+// strlen indica la lunghezza della stringa
 $lunghezza = strlen($text);
 
+// $_GET["censurata"] andrò a specificarla nell'URL con ==> ?censurata=parola
 $censurata = $_GET["censurata"];
-$paragrafoCensurato = str_replace($censurata, "***", $text);
+// str_ireplace sostituisce
+$paragrafoCensurato = str_ireplace($censurata, "***", $text);
 
 ?>
 
@@ -24,7 +27,8 @@ $paragrafoCensurato = str_replace($censurata, "***", $text);
     <title>PHP Badwords</title>
 </head>
 <body>
-
+    
+    <!-- echo va a stampare quello che gli indico -->
     <p><?php echo $text; ?></p>
     <p>Lunghezza:<?php echo $lunghezza; ?></p>
 
