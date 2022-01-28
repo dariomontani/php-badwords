@@ -7,6 +7,9 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 
 <?php
 
+$text = "Hello World!";
+$lunghezza = strlen($text);
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +21,10 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
     <title>PHP Badwords</title>
 </head>
 <body>
-    
+
+    <p><?php echo $text; ?></p>
+    <p>Lunghezza:<?php echo $lunghezza ?></p>
+
 
 </body>
 </html>
