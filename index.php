@@ -10,6 +10,8 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 $text = "Hello World!";
 $lunghezza = strlen($text);
 
+$censurata = $_GET["censurata"];
+
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +26,6 @@ $lunghezza = strlen($text);
 
     <p><?php echo $text; ?></p>
     <p>Lunghezza:<?php echo $lunghezza ?></p>
-
 
 </body>
 </html>
